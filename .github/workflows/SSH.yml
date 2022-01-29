@@ -1,5 +1,11 @@
 name: CI
-on: [push]
+on:
+  workflow_dispatch:
+    inputs:
+      DeviceTree_Name:
+        description: 'start'
+        required: true
+        default: 'y'
 jobs:
   build:
     runs-on: ubuntu-20.04
