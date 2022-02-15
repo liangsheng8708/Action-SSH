@@ -1,8 +1,10 @@
-name: Debugging with SSH
 on:
-  push:
-    branches:
-      - test_ngork
+  workflow_dispatch:
+    inputs:
+      DeviceTree_Name:
+        description: 'start'
+        required: true
+        default: 'start'
 jobs:
   build:
     runs-on: ubuntu-latest
